@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Israel Weather App</title>
+</head>
+<body>
+    <h1>Israel Weather</h1>
+    <form method="POST">
+        <label for="city">Select City:</label>
+        <select name="city" id="city">
+            {% for city in cities %}
+                <option value="{{ city }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Get Weather</button>
+    </form>
+    {% if temperature %}
+        <h2>{{ city_name }} Weather</h2>
+        <p>Temperature: {{ temperature }}°C</p>
+        <p>Description: {{ weather_description }}</p>
+    {% elif error %}
+        <p style="color: red;">{{ error }}</p>
+    {% else %}
+        <p>Please select a city.</p>
+    {% endif %}
+</body>
+</html>

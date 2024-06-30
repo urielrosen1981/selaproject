@@ -15,6 +15,8 @@ EXPOSE 5000
 
 # Define environment variable for Flask
 ENV FLASK_APP=app.py
+ENV PYTHONPATH=/app
+
 
 # Run tests (optional)
 RUN pip install pytest

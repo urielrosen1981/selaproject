@@ -5,7 +5,7 @@ stages:
 
 variables:
 #  DOCKER_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-DOCKER_IMAGE: urielrosen/weather-app:latest
+  DOCKER_IMAGE: urielrosen/weather-app:latest
 
 image: docker:dind
 

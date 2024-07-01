@@ -24,8 +24,8 @@ build:
     - echo $DOCKER_IMAGE
     - echo $CI_COMMIT_REF_SLUG
     - docker images
-    #- docker push $DOCKER_IMAGE
-    - docker push urielrosen/weather-app:pythonwebapp
+    - docker push $DOCKER_IMAGE
+    #- docker push urielrosen/weather-app:pythonwebapp
 
 
 test:

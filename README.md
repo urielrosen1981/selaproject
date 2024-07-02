@@ -1,5 +1,6 @@
 # UrielRosenFinalProject
-
+This is a python web application that displays tempratures for selected cities in Israel , 
+the weather data is pulled from openweathermap web site via API using requests python library.
 
 
 ## Getting started

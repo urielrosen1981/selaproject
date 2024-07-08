@@ -17,10 +17,10 @@ EXPOSE 5000
 ENV FLASK_APP=app.py
 ENV PYTHONPATH=/app
 
-
-# Run tests (optional)
-RUN pip install pytest
-RUN pytest
+# Initialize the database
+RUN flask db init || true
+RUN flask db migrate || true
+RUN flask db upgrade || true
 
 # Run the Flask app
 CMD ["flask", "run", "--host=0.0.0.0"]
